@@ -1,0 +1,131 @@
+<!-- SummitX Website - Fully Improved + Advanced Animations Version -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SummitX - Outdoor Adventure Gear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-x-hidden font-sans text-gray-900 bg-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 z-50 w-full transition-all duration-500 shadow bg-white/70 backdrop-blur-md">
+    <div class="flex items-center justify-between px-6 py-3 mx-auto max-w-7xl">
+      <h1 class="text-2xl font-bold tracking-wide transition-all duration-500 cursor-pointer hover:tracking-widest">SUMMITX</h1>
+      <ul id="menu" class="hidden gap-8 text-lg font-medium md:flex">
+        <li><a href="#home" class="transition-all duration-300 hover:text-gray-500">Home</a></li>
+        <li><a href="#brands" class="transition-all duration-300 hover:text-gray-500">Brands</a></li>
+        <li><a href="#products" class="transition-all duration-300 hover:text-gray-500">Products</a></li>
+        <li><a href="#contact" class="transition-all duration-300 hover:text-gray-500">Contact</a></li>
+      </ul>
+      <button id="openMenu" class="text-3xl md:hidden">☰</button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="flex-col hidden px-6 pb-4 bg-white shadow-md md:hidden animate-fadeDown">
+      <a href="#home" class="py-2 border-b">Home</a>
+      <a href="#brands" class="py-2 border-b">Brands</a>
+      <a href="#products" class="py-2 border-b">Products</a>
+      <a href="#contact" class="py-2 border-b">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="w-full pt-24">
+    <div class="relative w-full overflow-hidden h-96">
+      <img src="images/hero.jpg" class="object-cover w-full h-full scale-110 animate-zoomSlow" />
+    </div>
+    <div class="mt-6 text-center transition-all duration-700 translate-y-10 opacity-0 reveal">
+      <h2 class="text-4xl font-bold">Reach Your Summit</h2>
+      <p class="max-w-xl mx-auto mt-3 text-gray-600">Premium outdoor gear inspired by nature, built for adventure.</p>
+    </div>
+  </section>
+
+  <!-- BRANDS SECTION -->
+  <section id="brands" class="max-w-6xl px-6 mx-auto mt-20">
+    <h3 class="mb-6 text-3xl font-bold transition-all duration-700 translate-y-10 opacity-0 reveal">Our Partner Brands</h3>
+    <div class="grid items-center grid-cols-2 gap-6 md:grid-cols-4">
+      <img src="images/eiger.png" class="w-full transition-all duration-500 translate-y-10 opacity-0 hover:scale-110 reveal" />
+      <img src="images/arei.png" class="w-full transition-all duration-500 translate-y-10 opacity-0 hover:scale-110 reveal" />
+      <img src="images/northface.png" class="w-full transition-all duration-500 translate-y-10 opacity-0 hover:scale-110 reveal" />
+      <img src="images/rei.png" class="w-full transition-all duration-500 translate-y-10 opacity-0 hover:scale-110 reveal" />
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="products" class="max-w-6xl px-6 mx-auto mt-20">
+    <h3 class="mb-6 text-3xl font-bold transition-all duration-700 translate-y-10 opacity-0 reveal">Recommended Products</h3>
+
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+
+      <div class="p-4 transition-all duration-500 ease-out translate-y-10 shadow-md opacity-0 rounded-xl hover:scale-105 hover:-translate-y-2 hover:shadow-xl reveal">
+        <img src="images/outdoor1.jpg" class="w-full transition-all duration-500 rounded-lg hover:scale-110" />
+        <h4 class="mt-2 font-bold">SummitX Tactical Pack</h4>
+        <p class="text-sm text-gray-600">Durable, lightweight, and ready for adventure.</p>
+      </div>
+
+      <div class="p-4 transition-all duration-500 ease-out translate-y-10 shadow-md opacity-0 rounded-xl hover:scale-105 hover:-translate-y-2 hover:shadow-xl reveal">
+        <img src="images/outdoor2.jpg" class="w-full transition-all duration-500 rounded-lg hover:scale-110" />
+        <h4 class="mt-2 font-bold">SummitX Pro Jacket</h4>
+        <p class="text-sm text-gray-600">Built to withstand extreme weather.</p>
+      </div>
+
+      <div class="p-4 transition-all duration-500 ease-out translate-y-10 shadow-md opacity-0 rounded-xl hover:scale-105 hover:-translate-y-2 hover:shadow-xl reveal">
+        <img src="images/outdoor3.jpg" class="w-full transition-all duration-500 rounded-lg hover:scale-110" />
+        <h4 class="mt-2 font-bold">SummitX Climbing Rope</h4>
+        <p class="text-sm text-gray-600">Strong, reliable, trusted by climbers.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="py-10 mt-20 text-white bg-gray-900">
+    <div class="max-w-6xl px-6 mx-auto transition-all duration-700 translate-y-10 opacity-0 reveal">
+      <h3 class="mb-3 text-xl font-bold">Contact Us</h3>
+      <p>Email: summitx@outdoor.com</p>
+      <p>Instagram: @SummitX.Official</p>
+      <p class="mt-4 text-sm text-gray-400">© 2025 SummitX Outdoor</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT: Scroll Reveal Animations -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const openMenu = document.getElementById('openMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    openMenu.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- EXTRA CSS ANIMATIONS -->
+  <style>
+    @keyframes zoomSlow {
+      0% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .animate-zoomSlow {
+      animation: zoomSlow 6s ease-out forwards;
+    }
+    @keyframes fadeDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeDown {
+      animation: fadeDown 0.4s ease-out;
+    }
+  </style>
+
+</body>
+</html>

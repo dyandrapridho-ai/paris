@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Checkout Hilang Entah Kemana</title>
+
+<style>
+    body{
+        background:#fff;
+        font-family: monospace;
+        text-align:center;
+        margin-top:100px;
+    }
+    .glitch{
+        font-size:30px;
+        font-weight:bold;
+        animation:shake 0.4s infinite;
+        color:#333;
+    }
+    @keyframes shake {
+        0%{transform:translateX(0);}
+        25%{transform:translateX(-5px);}
+        50%{transform:translateX(5px);}
+        75%{transform:translateX(-5px);}
+        100%{transform:translateX(0);}
+    }
+
+    .loading {
+        font-size:18px;
+        opacity:0.6;
+        animation:blink 1s infinite;
+    }
+    @keyframes blink {
+        0%,100%{opacity:0.1;}
+        50%{opacity:1;}
+    }
+
+    .emoji{
+        font-size:50px;
+        animation:bounce 1s infinite;
+    }
+    @keyframes bounce{
+        0%{transform:translateY(0);}
+        50%{transform:translateY(-15px);}
+        100%{transform:translateY(0);}
+    }
+</style>
+</head>
+<body>
+
+<div class="emoji">😆</div>
+<div class="glitch">
+  maaf broduk ini tidak dapat di beli </div>
+<p class="loading">karna ini Project bukan web brand beneran kocak</p>
+<p class="loading">🤣🤣🤣🤣🤣</p>
+
+<pre style="margin-top:30px;">npm run balikdong</pre>
+
+
+
+</body>
+</html>
